@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <div class="navegador">
+        <div class="navegador__content">
+            <ul class="nav__ul">
+                <a class="logo__nav" href="index.html"><img src="src/img/log-remove.png" width="30%"></a>
+                <li><a href="menu.html">Menu del día</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li class="login__usuario"><span id="user"></span>
+                    <ul class="sub-menu">
+                        <li><a id="cerrar-sesion">Cerrar Sesion</a></li>
+                    </ul>
+                </li>
+                <li class="login__nav" id="login_nav"><a href="login.html">Login | Registro</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="ventana__interna">
+        <div class="galeria__interna">
+            <div class="galeria__items">
+                <h3>Post 01</h3>
+                <img src="src/img/1.jpg" width="60%">
+                <button id="btn-megusta-1">Me Gusta</button>
+                <span class="like-item1">0 Like's</span>
+            </div>
+            <div class="galeria__items">
+                <h3>Post 02</h3>
+                <img src="src/img/1.jpg" width="60%">
+                <button id="btn-megusta-2">Me Gusta</button>
+                <span class="like-item2">0 Like's</span>
+            </div>
+            <div class="galeria__items">
+                <h3>Post 03</h3>
+                <img src="src/img/1.jpg" width="60%">
+                <button id="btn-megusta-3">Me Gusta</button>
+                <span class="like-item3">0 Like's</span>
+            </div>
+        </div>
+        <button id="ocultar" class="ranking">Volver</button>
+    </div>
+
+    <div class="form__contacto show" id="form__contacto">
+        <div class="form__contacto-content">
+            <a id="back__arrow"><img class="arrow__back-svg" src="src/img/back-arrow.svg" alt=""></a>
+            <form action="">
+                <h3>Contactanos</h3>
+                <h4>Dejanos tus inquietudes</h4>
+                <input type="text" name="" id="in__name" placeholder="Nombre Completo">
+                <input type="text" name="" id="in__ape" placeholder="Apellidos">
+                <input type="email" name="" id="in__correo" placeholder="Correo Electronico">
+                <input type="text" name="" id="in__asun" placeholder="Asunto">
+                <textarea name="" id="textarea_descripcion" cols="30" rows="10" placeholder="Detalles de la consulta..."></textarea>
+                <span class="span">-Preciona entrer para enviar o en el botón-</span>
+                <a class="btn-enviar" id="btn__enviar">Enviar</a>
+            </form>
+        </div>
+    </div>
+    <div class="popup__general show" id="popup__general">
+        <div class="popup__confirmacion">
+            <h2 class="popup-h2">Peticion Realizada</h2>
+            <a class="btn-enviar" id="btn-aceptar">Aceptar</a>
+        </div>
+    </div>
+
+
+
+    <div class="caja__trasera-contacto">
+
+        <button class="ranking" id="ranking">Ver Rankig</button>
+        <button class="ranking rigth" id="btn__form__contacto">Contactanos</button>
+
+        <div class="caja__facebook">
+            <h2>Facebook</h2>
+            <img src="src/img/logo-facebook.png" width="15%">
+            <p>Dale a Me Gusta a nuestra pagina</p>
+            <button>Ir</button>
+        </div>
+        <div class="caja__grande">
+            <div class="caja__instagram">
+                <h2>Instagram</h2>
+                <img src="src/img/logo-instagram.png" width="15%">
+                <p>Sigue nuestra pagina</p>
+                <button>Ir</button>
+            </div>
+            <div class="caja__pinterest">
+                <h2>Pinterest</h2>
+                <img src="src/img/logo-pinterest.png" width="15%">
+                <p>Sigue nuestra pagina</p>
+                <button>Ir</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="izq">
+            <h2>Restaurante TRB</h2>
+            <h3>Todo Rico y Barato</h3>
+            <h4>CopyRight ©℗®™</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias explicabo placeat sit id deleniti in fugit quam odit aliquid necessitatibus. ©℗®™</p>
+        </div>
+        <div class="der">
+            <a href="index.html"><img src="src/img/log-remove.png"></a>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="src/js/contacto.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+[{
+        "platillo": "Desayunos",
+        "precio": " "
+    },
+    {
+        "platillo": "Huevos, Tostadas y Jugo Natural o Cafe con Leche",
+        "precio": "15"
+    },
+    {
+        "platillo": "Tostadas, Tosino, Huevo y Jugo Natrual o Cafe con Leche",
+        "precio": "20"
+    },
+    {
+        "platillo": "Ensalda de Frutas y Jugo Natural",
+        "precio": "20"
+    },
+    {
+        "platillo": "Fruta picada (a eleccion) y Jugo (a eleccion)",
+        "precio": "30"
+    },
+    {
+        "platillo": "Almuerzos",
+        "precio": " "
+    },
+    {
+        "platillo": "Arroz, Carne parrillera, ensalada, maduro y Jugo de Cosecha",
+        "precio": "40"
+    },
+    {
+        "platillo": "Espaguetis, Pollo, Ensalada, Papa, Jugo Natural",
+        "precio": "40"
+    },
+    {
+        "platillo": "Pescado, Ensalada, Papa, Maduro, Bebida al gusto",
+        "precio": "45"
+    },
+    {
+        "platillo": "Carne a la parrilla, Papa Fosforito, ensalada, Bebida al gusto",
+        "precio": "45"
+    },
+    {
+        "platillo": "Comida Rapida",
+        "precio": " "
+    },
+    {
+        "platillo": "Hamburguesa",
+        "precio": "15"
+    },
+    {
+        "platillo": "Pizza (Porcion)",
+        "precio": "10"
+    },
+    {
+        "platillo": "Pizza (Entera 8 Porciones)",
+        "precio": "75"
+    },
+    {
+        "platillo": "HotDog",
+        "precio": "15"
+    },
+    {
+        "platillo": "Jugo Natural",
+        "precio": "8"
+    },
+    {
+        "platillo": "Bebida Gaseosa - Cerveza",
+        "precio": "25"
+    }
+]

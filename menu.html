@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/log-remove.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>Menu</title>
+</head>
+
+<body>
+    <div class="navegador">
+        <div class="navegador__content">
+            <ul class="nav__ul">
+                <a class="logo__nav" href="index.html"><img src="src/img/log-remove.png" width="30%"></a>
+                <li><a href="menu.html">Menu del día</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li class="login__usuario"><span id="user"></span>
+                    <ul class="sub-menu">
+                        <li><a id="cerrar-sesion">Cerrar Sesion</a></li>
+                    </ul>
+                </li>
+                <li class="login__nav" id="login_nav"><a href="login.html">Login | Registro</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main__content">
+        <div class="content__interno">
+            <div class="content__interno-items">
+                <div class="menu">
+                    <button class="btn-menu" id="btn-mostrar-menu">Ver Menu Completo</button>
+                    <table id="menu">
+                        <div class="btn-rigth">
+                            <a class="btn-floating" id="cerrar-menu"><img src="src/img/cerrar.png" width="40%"></a>
+                        </div>
+                        <thead>
+                            <tr>
+                                <th>Platillo</th>
+                                <th>Precio</th>
+                            </tr>
+                        <tbody id="datos">
+
+                        </tbody>
+                        </thead>
+                    </table>
+                </div>
+                <div class="popup">
+                    <div class="popup__content">
+                        <h2>Realizar Pedido</h2>
+                        <div class="popup__content-items">
+                            <div class="popup_derecha">
+                                <div class="info-cli">
+                                    <h3>Datos Cliente</h3>
+                                    <form action="">
+                                        <input type="text" name="" placeholder="Nombre" id="nombre_cli">
+                                        <input type="text" name="" placeholder="Numero Celular" id="celular_cli">
+                                    </form>
+                                    <div class="form_domicilio">
+                                        <p>¿Envio a Domicilio?</p>
+                                        <input type="radio" name="domi" id="chb-si" onchange="mostrarDireccion()">
+                                        <label for="chb-si">Si</label>
+                                        <input type="radio" name="domi" id="chb-no" onchange="ocultarDireccion()">
+                                        <label for="chb-no">No</label>
+                                    </div>
+                                    <input class="input-domicilio" type="text" name="" id="domicilio"
+                                        placeholder="Direccion">
+                                </div>
+                            </div>
+                            <div class="popup_izquierda">
+                                <div class="info-pedido">
+                                    <h3>Comida</h3>
+                                    <select name="platos" class="combo-box-platillos" id="menu-items">
+
+                                    </select>
+                                    <span class="p-precio" id="valor_plato" disabled>--Selecciona un Plato--</span>
+                                    <button class="btn-facturar" id="btn-facturar">Facturar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="facturacion" id="facturacion-div">
+                            <h3>Datos Facturacion</h3>
+                            <div class="datos-cliente-pedido">
+                                <div class="datos-factura-cliente">
+                                    <label class="label" for="nombre_factura">Nombre</label>
+                                    <input disabled class="text-datos" type="text" placeholder="Nombre" id="nombre_factura">
+                                    <label class="label" for="celular_factura">Celular</label>
+                                    <input disabled class="text-datos" type="text" placeholder="Numero Celular"
+                                    id="celular_factura">
+                                    <label class="label" for="domicilio_factura">Direccion</label>
+                                    <input disabled class="text-datos" type="text" placeholder="Direccion"
+                                    id="domicilio_factura">
+                                    <label class="label" for="plato_factura">Platillo</label>
+                                    <input disabled class="text-datos" type="text" placeholder="Platillo"
+                                    id="plato_factura">
+                                </div>
+                                <div class="datos-factura-pago">
+                                    <label class="label" for="Sub-Total">Sub-Total</label>
+                                    <input disabled class="number-datos" type="number" placeholder="Sub-Total"
+                                    id="subvalor_factura">
+                                    <label class="label" for="valor_iva">IVA</label>
+                                    <input disabled class="number-datos" type="number" placeholder="IVA (19%)"
+                                    id="valor_iva">
+                                    <label class="label" for="valor_total">Total a Pagar</label>
+                                    <input disabled class="number-datos" type="number" placeholder="Total a Pagar"
+                                    id="valor_total">
+                                </div>
+
+
+                            </div>
+                            <div class="metodos-pago">
+                                <p>Metodo de Pago</p>
+                                <input type="radio" name="metodo-pago" id="tarjeta" onchange="mostrarMetododepago()">
+                                <label for="tarjeta">Tarjeta Cre. Deb.</label>
+                                <input type="radio" name="metodo-pago" id="efectivo" onchange="ocultarMetodosobrante()">
+                                <label for="efectivo">Efectivo</label>
+                                <input type="radio" name="metodo-pago" id="consignacion"
+                                    onchange="ocultarMetodosobrante()">
+                                <label for="consignacion">Nequi - Movii</label>
+                                <input class="input-metodo" type="text" id="metodo" placeholder="N° Cuenta - Tarjeta">
+                                <input class="input-SV" type="text" id="sv" placeholder="Codigo SV">
+                            </div>
+                            <button class="btn-factura"
+                            id="btn-confrimar">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="titulo__menu-destacado">Menu Del Dia Destacado</h2>
+            <div class="menu__catalogo">
+                <div class="menu__catalogo-items">
+                    <h3>Desayuno</h3>
+                    <img src="src/img/1.jpg" width="90%">
+                    <p>Enasalada y Jugo - $20</p>
+                </div>
+                <div class="menu__catalogo-items">
+                    <h3>Almuerzo</h3>
+                    <img src="src/img/4.jpg" width="80%">
+                    <p>Pollo, Arroz y Juego - $25</p>
+                </div>
+                <div class="menu__catalogo-items">
+                    <h3>Pizza</h3>
+                    <img src="src/img/3.jpg" width="90%">
+                    <p>Pizza 8 Porciones - $75</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="izq">
+            <h2>Restaurante TRB</h2>
+            <h3>Todo Rico y Barato</h3>
+            <h4>CopyRight ©℗®™</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias explicabo placeat sit id deleniti in fugit quam odit aliquid necessitatibus. ©℗®™</p>
+        </div>
+        <div class="der">
+            <a href="index.html"><img src="src/img/log-remove.png"></a>
+        </div>
+    </footer>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/cargarMenu.js"></script>
+    <script src="src/js/menu.js"></script>
+</body>
+
+</html>
